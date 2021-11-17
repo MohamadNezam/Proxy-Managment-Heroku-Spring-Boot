@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Proxies</title>
+</head>
+<body>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr th:each="proxy:${proxies}">
+      <th scope="row" th:text="${proxy.id}">Id</th>
+      <td th:text="${proxy.proxyIp}">ProxyIp</td>
+      <td th:text="${proxy.username}">Username</td>
+      <td th:text="${proxy.password}">Password</td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</body>
+</html>

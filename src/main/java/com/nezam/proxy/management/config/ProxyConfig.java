@@ -16,8 +16,9 @@ public class ProxyConfig {
             Proxy p1 = new Proxy(Long.valueOf(1),"a","a","a",444,"a","a",22,22, Proxy.ProxyStatus.Active);
             Proxy p2 = new Proxy(Long.valueOf(2),"a","a","a",444,"a","a",22,22, Proxy.ProxyStatus.Active);
 
-            repository.save(p1);
-            repository.save(p2);
+            repository.saveAll(List.of(p1,p2));
+//            repository.save(p1);
+//            repository.save(p2);
         };
     }
 }
